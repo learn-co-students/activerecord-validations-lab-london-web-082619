@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
     private
 
     def clickbait
-        clickbait = /Won't Believe|Secret|Top\d*|Guess/i
+        clickbait = /Won't Believe|Secret|Top\d*|Guess/
       if clickbait.match(title) == nil
         errors.add(:title, "only clickbait")
       end
