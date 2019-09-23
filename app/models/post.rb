@@ -9,8 +9,8 @@ class Post < ActiveRecord::Base
     private
 
     def clickbait
-        clickbait = /Won't Believe|Secret|Top\d*|Guess/
-      if clickbait.match(title) == nil
+        clickbait_check = /Won't Believe|Secret|Top\d*|Guess/
+      if clickbait_check.match(title) == nil
         errors.add(:title, "only clickbait")
       end
     end
